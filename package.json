@@ -1,0 +1,17 @@
+{
+  "name": "atom-wrapper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@octokit/rest": "^16.0.1",
+    "request": "^2.88.0",
+    "tar": "^4.4.8"
+  }
+}

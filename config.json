@@ -1,0 +1,5 @@
+{
+  "path": "/opt/atom-wrapper/atom",
+  "regex": "amd64\\.tar\\.gz",
+  "regexFlags": "i"
+}
