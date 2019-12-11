@@ -15,6 +15,7 @@
   "dependencies": {
     "@octokit/rest": "^16.0.1",
     "request": "^2.88.0",
+    "semver": "^6.3.0",
     "tar": "^4.4.8"
   },
   "devDependencies": {

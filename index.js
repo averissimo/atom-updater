@@ -3,6 +3,7 @@
 const octokit = require('@octokit/rest')();
 const tar = require('tar');
 const request = require('request');
+const semver = require('semver');
 
 const opts = require('./config.json');
 
@@ -19,7 +20,10 @@ octokit
     // Sort releases by published date
     const releases = response
       .data
-      .sort((a, b) => a.published_at.localeCompare(b.publised_at));
+      .sort((a, b) => semver.compare(b.tag_name, a.tag_name))
+      .filter(el => el.prerelease === false || el.prerelease === opts.prerelease);
+    
+    // releases.forEach(el => console.log(el.name, el.prerelease))
 
     // Get first
     if (releases.length > 0) {
