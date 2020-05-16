@@ -14,3 +14,18 @@ npm start
 ```
 
 That's it!
+
+## Executable
+
+In order for atom to run in background I've added the following script to `/usr/local/bin`
+
+
+```
+#!/bin/bash
+
+ATOM_DIR=/opt/atom
+
+nohup $ATOM_DIR/atom $@ > /dev/null 2> /dev/null &
+```
+
+*note:* change `ATOM_DIR` for the directory where you are installing
