@@ -18,8 +18,8 @@ const octokit = new Octokit();
 async function install() {
   // Retrieve information from github
   const response = await octokit.repos.listReleases({
-    owner: 'atom',
-    repo: 'atom',
+    owner: 'pulsar-edit',
+    repo: 'pulsar',
     per_page: 30,
     page: 1
   });
